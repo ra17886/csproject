@@ -1,0 +1,1166 @@
+[
+    {
+        "view_history": "[{\"page_index\":0,\"viewing_time\":4421.744999999646},{\"page_index\":1,\"viewing_time\":4828.909999981988},{\"page_index\":2,\"viewing_time\":4140.469999983907},{\"page_index\":3,\"viewing_time\":7547.610000008717},{\"page_index\":4,\"viewing_time\":2576.089999987744},{\"page_index\":5,\"viewing_time\":1772.4900000030175}]",
+        "rt": 25290.259999979753,
+        "trial_type": "instructions",
+        "trial_index": 0,
+        "time_elapsed": 25295,
+        "internal_node_id": "0.0-0.0"
+    },
+    {
+        "rt": 9154.529999999795,
+        "responses": "{\"Q0\":\"Yes\",\"Q1\":\"Yes\",\"Q2\":\"Yes\"}",
+        "question_order": "[0,1,2]",
+        "trial_type": "survey-multi-choice",
+        "trial_index": 1,
+        "time_elapsed": 34458,
+        "internal_node_id": "0.0-1.0-0.0"
+    },
+    {
+        "rt": 12498.20000003092,
+        "responses": "{\"Q0\":\"Yes\",\"Q1\":\"Yes\",\"Q2\":\"Yes\"}",
+        "question_order": "[0,1,2]",
+        "trial_type": "survey-multi-choice",
+        "trial_index": 2,
+        "time_elapsed": 46961,
+        "internal_node_id": "0.0-2.0-0.0"
+    },
+    {
+        "rt": 6297.829999995884,
+        "responses": "{\"Q0\":\"5f4ee688c01262124346d834\"}",
+        "trial_type": "survey-text",
+        "trial_index": 3,
+        "time_elapsed": 53267,
+        "internal_node_id": "0.0-3.0"
+    },
+    {
+        "rt": 3255.2600000053644,
+        "responses": "{\"Q0\":\"Male\",\"Q1\":\"25-34\"}",
+        "question_order": "[0,1]",
+        "trial_type": "survey-multi-choice",
+        "trial_index": 4,
+        "time_elapsed": 56526,
+        "internal_node_id": "0.0-4.0"
+    },
+    {
+        "rt": 3374.2849999689497,
+        "responses": "{\"Q0\":\"\"}",
+        "trial_type": "survey-text",
+        "trial_index": 5,
+        "time_elapsed": 59906,
+        "internal_node_id": "0.0-5.0"
+    },
+    {
+        "view_history": "[{\"page_index\":0,\"viewing_time\":2318.420000025071}]",
+        "rt": 2318.9250000286847,
+        "trial_type": "instructions",
+        "trial_index": 6,
+        "time_elapsed": 62226,
+        "internal_node_id": "0.0-6.0"
+    },
+    {
+        "rt": 11179.790000023786,
+        "responses": "{\"Interested\":3,\"Distressed\":3,\"Excited\":2,\"Upset\":3}",
+        "question_order": "[0,1,2,3]",
+        "trial_type": "survey-likert",
+        "trial_index": 7,
+        "time_elapsed": 73412,
+        "internal_node_id": "0.0-7.0"
+    },
+    {
+        "rt": 8397.215000004508,
+        "responses": "{\"Strong\":1,\"Guilty\":2,\"Scared\":3,\"Hostile\":2}",
+        "question_order": "[0,1,2,3]",
+        "trial_type": "survey-likert",
+        "trial_index": 8,
+        "time_elapsed": 81817,
+        "internal_node_id": "0.0-8.0"
+    },
+    {
+        "rt": 8119.959999981802,
+        "responses": "{\"Enthusiastic\":2,\"Proud\":1,\"Irritable\":3,\"Alert\":2}",
+        "question_order": "[0,1,2,3]",
+        "trial_type": "survey-likert",
+        "trial_index": 9,
+        "time_elapsed": 89943,
+        "internal_node_id": "0.0-9.0"
+    },
+    {
+        "rt": 10498.62500000745,
+        "responses": "{\"Ashamed\":2,\"Inspired\":1,\"Nervous\":2,\"Determined\":2}",
+        "question_order": "[0,1,2,3]",
+        "trial_type": "survey-likert",
+        "trial_index": 10,
+        "time_elapsed": 100451,
+        "internal_node_id": "0.0-10.0"
+    },
+    {
+        "rt": 8781.529999978375,
+        "responses": "{\"Attentive\":2,\"Jittery\":2,\"Active\":1,\"Afraid\":3}",
+        "question_order": "[0,1,2,3]",
+        "trial_type": "survey-likert",
+        "trial_index": 11,
+        "time_elapsed": 109239,
+        "internal_node_id": "0.0-11.0"
+    },
+    {
+        "rt": 15905.199999979232,
+        "responses": "{\"Q0\":2,\"Q1\":2,\"Q2\":2,\"Q3\":2}",
+        "question_order": "[0,1,2,3]",
+        "trial_type": "survey-likert",
+        "trial_index": 12,
+        "time_elapsed": 125148,
+        "internal_node_id": "0.0-12.0"
+    },
+    {
+        "rt": 7820.275000005495,
+        "responses": "{\"Q0\":1,\"Q1\":1,\"Q2\":2,\"Q3\":2}",
+        "question_order": "[0,1,2,3]",
+        "trial_type": "survey-likert",
+        "trial_index": 13,
+        "time_elapsed": 132972,
+        "internal_node_id": "0.0-13.0"
+    },
+    {
+        "rt": 6557.815000007395,
+        "responses": "{\"Q0\":2,\"Q1\":2,\"Q2\":2,\"Q3\":2}",
+        "question_order": "[0,1,2,3]",
+        "trial_type": "survey-likert",
+        "trial_index": 14,
+        "time_elapsed": 139534,
+        "internal_node_id": "0.0-14.0"
+    },
+    {
+        "rt": 8548.24999999255,
+        "responses": "{\"Q0\":2,\"Q1\":2,\"Q2\":2}",
+        "question_order": "[0,1,2]",
+        "trial_type": "survey-likert",
+        "trial_index": 15,
+        "time_elapsed": 148085,
+        "internal_node_id": "0.0-15.0"
+    },
+    {
+        "view_history": "[{\"page_index\":0,\"viewing_time\":2416.3100000005215},{\"page_index\":1,\"viewing_time\":6709.664999973029},{\"page_index\":2,\"viewing_time\":5240.030000044499}]",
+        "rt": 14366.440000012517,
+        "trial_type": "instructions",
+        "trial_index": 16,
+        "time_elapsed": 162468,
+        "internal_node_id": "0.0-16.0"
+    },
+    {
+        "rt": 1181.304999976419,
+        "stimulus": "<p>Choose a box,</p>",
+        "button_pressed": 2,
+        "trial_type": "html-button-response",
+        "trial_index": 17,
+        "time_elapsed": 163654,
+        "internal_node_id": "0.0-17.0-0.0"
+    },
+    {
+        "rate": 0.4329529252639927,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 18,
+        "time_elapsed": 163655,
+        "internal_node_id": "0.0-17.0-1.0"
+    },
+    {
+        "rt": null,
+        "stimulus": "<div style=\"background-color:#ff7157\"><h1 style=\"background-color:Tomato\">Bad luck! There was no prize in the box!</h1><h1 style=\"background-color:Tomato\">Remember, you need to keep going until you have 20 prizes!</h1><img id=\"box\" src=\"img/sad/purpleopenboxsadthumb.png\"></img></div>",
+        "key_press": null,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 18,
+        "time_elapsed": 165157,
+        "internal_node_id": "0.0-17.0-1.0"
+    },
+    {
+        "rt": 1176.720000046771,
+        "stimulus": "<p>Choose a box,</p>",
+        "button_pressed": 1,
+        "trial_type": "html-button-response",
+        "trial_index": 19,
+        "time_elapsed": 166337,
+        "internal_node_id": "0.0-17.0-0.1"
+    },
+    {
+        "rate": 0.8118966827479996,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 20,
+        "time_elapsed": 166337,
+        "internal_node_id": "0.0-17.0-1.1"
+    },
+    {
+        "rt": null,
+        "stimulus": "<div style=\"background-color:#ff7157\"><h1 style=\"background-color:Tomato\">Bad luck! There was no prize in the box!</h1><h1 style=\"background-color:Tomato\">Remember, you need to keep going until you have 20 prizes!</h1><img id=\"box\" src=\"img/sad/greenopenboxsadthumb.png\"></img></div>",
+        "key_press": null,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 20,
+        "time_elapsed": 167839,
+        "internal_node_id": "0.0-17.0-1.1"
+    },
+    {
+        "rt": 854.5049999956973,
+        "stimulus": "<p>Choose a box,</p>",
+        "button_pressed": 1,
+        "trial_type": "html-button-response",
+        "trial_index": 21,
+        "time_elapsed": 168697,
+        "internal_node_id": "0.0-17.0-0.2"
+    },
+    {
+        "rate": 0.8118966827479996,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 22,
+        "time_elapsed": 168697,
+        "internal_node_id": "0.0-17.0-1.2"
+    },
+    {
+        "rt": null,
+        "stimulus": "<div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >You won a prize! Well done!</h1><div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >Only 19 left to go!</h1><img id=\"box\" src=\"img/prizes/beachball.png\"></img><img id=\"box\" src=\"img/empty/greenopenbox.png\"></img></div>",
+        "key_press": null,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 22,
+        "time_elapsed": 170200,
+        "internal_node_id": "0.0-17.0-1.2"
+    },
+    {
+        "view_history": "[{\"page_index\":0,\"viewing_time\":4392.559999949299}]",
+        "rt": 4393.079999950714,
+        "trial_type": "instructions",
+        "trial_index": 23,
+        "time_elapsed": 174595,
+        "internal_node_id": "0.0-18.0"
+    },
+    {
+        "rt": 948.9350000512786,
+        "stimulus": "<p>Choose a box,</p>",
+        "button_pressed": 3,
+        "trial_type": "html-button-response",
+        "trial_index": 24,
+        "time_elapsed": 175547,
+        "internal_node_id": "0.0-19.0-0.0"
+    },
+    {
+        "rate": 0.4804843529333029,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 25,
+        "time_elapsed": 175547,
+        "internal_node_id": "0.0-19.0-1.0"
+    },
+    {
+        "rt": null,
+        "stimulus": "<div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >You won a prize! Well done!</h1><div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >Only 19 left to go!</h1><img id=\"box\" src=\"img/prizes/choc.png\"></img><img id=\"box\" src=\"img/empty/redopenbox.png\"></img></div>",
+        "key_press": null,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 25,
+        "time_elapsed": 177050,
+        "internal_node_id": "0.0-19.0-1.0"
+    },
+    {
+        "rt": 908.5750000085682,
+        "stimulus": "<p>Choose a box,</p>",
+        "button_pressed": 3,
+        "trial_type": "html-button-response",
+        "trial_index": 26,
+        "time_elapsed": 177962,
+        "internal_node_id": "0.0-19.1-0.1"
+    },
+    {
+        "rate": 0.4804843529333029,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 27,
+        "time_elapsed": 177962,
+        "internal_node_id": "0.0-19.1-1.1"
+    },
+    {
+        "rt": null,
+        "stimulus": "<div style=\"background-color:#ff7157\"><h1 style=\"background-color:Tomato\">Bad luck! There was no prize in the box!</h1><h1 style=\"background-color:Tomato\">Remember, you need to keep going until you have 20 prizes!</h1><img id=\"box\" src=\"img/sad/redopenboxsadthumb.png\"></img></div>",
+        "key_press": null,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 27,
+        "time_elapsed": 179464,
+        "internal_node_id": "0.0-19.1-1.1"
+    },
+    {
+        "rt": 948.5599999898113,
+        "stimulus": "<p>Choose a box,</p>",
+        "button_pressed": 2,
+        "trial_type": "html-button-response",
+        "trial_index": 28,
+        "time_elapsed": 180415,
+        "internal_node_id": "0.0-19.2-0.2"
+    },
+    {
+        "rate": 0.332862185204114,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 29,
+        "time_elapsed": 180415,
+        "internal_node_id": "0.0-19.2-1.2"
+    },
+    {
+        "rt": null,
+        "stimulus": "<div style=\"background-color:#ff7157\"><h1 style=\"background-color:Tomato\">Bad luck! There was no prize in the box!</h1><h1 style=\"background-color:Tomato\">Remember, you need to keep going until you have 20 prizes!</h1><img id=\"box\" src=\"img/sad/purpleopenboxsadthumb.png\"></img></div>",
+        "key_press": null,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 29,
+        "time_elapsed": 181919,
+        "internal_node_id": "0.0-19.2-1.2"
+    },
+    {
+        "rt": 833.1200000247918,
+        "stimulus": "<p>Choose a box,</p>",
+        "button_pressed": 1,
+        "trial_type": "html-button-response",
+        "trial_index": 30,
+        "time_elapsed": 182754,
+        "internal_node_id": "0.0-19.3-0.3"
+    },
+    {
+        "rate": 0.6395140543802668,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 31,
+        "time_elapsed": 182754,
+        "internal_node_id": "0.0-19.3-1.3"
+    },
+    {
+        "rt": null,
+        "stimulus": "<div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >You won a prize! Well done!</h1><div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >Only 18 left to go!</h1><img id=\"box\" src=\"img/prizes/bear.png\"></img><img id=\"box\" src=\"img/empty/greenopenbox.png\"></img></div>",
+        "key_press": null,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 31,
+        "time_elapsed": 184257,
+        "internal_node_id": "0.0-19.3-1.3"
+    },
+    {
+        "rt": 707.2849999531172,
+        "stimulus": "<p>Choose a box,</p>",
+        "button_pressed": 0,
+        "trial_type": "html-button-response",
+        "trial_index": 32,
+        "time_elapsed": 184967,
+        "internal_node_id": "0.0-19.4-0.4"
+    },
+    {
+        "rate": 0.7827514045230177,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 33,
+        "time_elapsed": 184968,
+        "internal_node_id": "0.0-19.4-1.4"
+    },
+    {
+        "rt": null,
+        "stimulus": "<div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >You won a prize! Well done!</h1><div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >Only 17 left to go!</h1><img id=\"box\" src=\"img/prizes/flowers.png\"></img><img id=\"box\" src=\"img/empty/blueopenbox.png\"></img></div>",
+        "key_press": null,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 33,
+        "time_elapsed": 186471,
+        "internal_node_id": "0.0-19.4-1.4"
+    },
+    {
+        "rt": 518.6150000081398,
+        "stimulus": "<p>Choose a box,</p>",
+        "button_pressed": 2,
+        "trial_type": "html-button-response",
+        "trial_index": 34,
+        "time_elapsed": 186992,
+        "internal_node_id": "0.0-19.5-0.5"
+    },
+    {
+        "rate": 0.332862185204114,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 35,
+        "time_elapsed": 186993,
+        "internal_node_id": "0.0-19.5-1.5"
+    },
+    {
+        "rt": null,
+        "stimulus": "<div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >You won a prize! Well done!</h1><div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >Only 16 left to go!</h1><img id=\"box\" src=\"img/prizes/coins.png\"></img><img id=\"box\" src=\"img/empty/purpleopenbox.png\"></img></div>",
+        "key_press": null,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 35,
+        "time_elapsed": 188496,
+        "internal_node_id": "0.0-19.5-1.5"
+    },
+    {
+        "rt": 654.114999982994,
+        "stimulus": "<p>Choose a box,</p>",
+        "button_pressed": 2,
+        "trial_type": "html-button-response",
+        "trial_index": 36,
+        "time_elapsed": 189153,
+        "internal_node_id": "0.0-19.6-0.6"
+    },
+    {
+        "rate": 0.332862185204114,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 37,
+        "time_elapsed": 189153,
+        "internal_node_id": "0.0-19.6-1.6"
+    },
+    {
+        "rt": null,
+        "stimulus": "<div style=\"background-color:#ff7157\"><h1 style=\"background-color:Tomato\">Bad luck! There was no prize in the box!</h1><h1 style=\"background-color:Tomato\">Remember, you need to keep going until you have 20 prizes!</h1><img id=\"box\" src=\"img/sad/purpleopenboxsadthumb.png\"></img></div>",
+        "key_press": null,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 37,
+        "time_elapsed": 190657,
+        "internal_node_id": "0.0-19.6-1.6"
+    },
+    {
+        "rt": 204.74000001559034,
+        "stimulus": "<p>Choose a box,</p>",
+        "button_pressed": 3,
+        "trial_type": "html-button-response",
+        "trial_index": 38,
+        "time_elapsed": 190864,
+        "internal_node_id": "0.0-19.7-0.7"
+    },
+    {
+        "rate": 0.4804843529333029,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 39,
+        "time_elapsed": 190864,
+        "internal_node_id": "0.0-19.7-1.7"
+    },
+    {
+        "rt": null,
+        "stimulus": "<div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >You won a prize! Well done!</h1><div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >Only 15 left to go!</h1><img id=\"box\" src=\"img/prizes/choc.png\"></img><img id=\"box\" src=\"img/empty/redopenbox.png\"></img></div>",
+        "key_press": null,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 39,
+        "time_elapsed": 192367,
+        "internal_node_id": "0.0-19.7-1.7"
+    },
+    {
+        "rt": 389.52000002609566,
+        "stimulus": "<p>Choose a box,</p>",
+        "button_pressed": 0,
+        "trial_type": "html-button-response",
+        "trial_index": 40,
+        "time_elapsed": 192759,
+        "internal_node_id": "0.0-19.8-0.8"
+    },
+    {
+        "rate": 0.7827514045230177,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 41,
+        "time_elapsed": 192759,
+        "internal_node_id": "0.0-19.8-1.8"
+    },
+    {
+        "rt": null,
+        "stimulus": "<div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >You won a prize! Well done!</h1><div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >Only 14 left to go!</h1><img id=\"box\" src=\"img/prizes/ring.png\"></img><img id=\"box\" src=\"img/empty/blueopenbox.png\"></img></div>",
+        "key_press": null,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 41,
+        "time_elapsed": 194262,
+        "internal_node_id": "0.0-19.8-1.8"
+    },
+    {
+        "rt": 816.6249999776483,
+        "stimulus": "<p>Choose a box,</p>",
+        "button_pressed": 2,
+        "trial_type": "html-button-response",
+        "trial_index": 42,
+        "time_elapsed": 195081,
+        "internal_node_id": "0.0-19.9-0.9"
+    },
+    {
+        "rate": 0.332862185204114,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 43,
+        "time_elapsed": 195082,
+        "internal_node_id": "0.0-19.9-1.9"
+    },
+    {
+        "rt": null,
+        "stimulus": "<div style=\"background-color:#ff7157\"><h1 style=\"background-color:Tomato\">Bad luck! There was no prize in the box!</h1><h1 style=\"background-color:Tomato\">Remember, you need to keep going until you have 20 prizes!</h1><img id=\"box\" src=\"img/sad/purpleopenboxsadthumb.png\"></img></div>",
+        "key_press": null,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 43,
+        "time_elapsed": 196585,
+        "internal_node_id": "0.0-19.9-1.9"
+    },
+    {
+        "rt": 157.92999998666346,
+        "stimulus": "<p>Choose a box,</p>",
+        "button_pressed": 1,
+        "trial_type": "html-button-response",
+        "trial_index": 44,
+        "time_elapsed": 196745,
+        "internal_node_id": "0.0-19.10-0.10"
+    },
+    {
+        "rate": 0.6395140543802668,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 45,
+        "time_elapsed": 196745,
+        "internal_node_id": "0.0-19.10-1.10"
+    },
+    {
+        "rt": null,
+        "stimulus": "<div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >You won a prize! Well done!</h1><div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >Only 13 left to go!</h1><img id=\"box\" src=\"img/prizes/ring.png\"></img><img id=\"box\" src=\"img/empty/greenopenbox.png\"></img></div>",
+        "key_press": null,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 45,
+        "time_elapsed": 198249,
+        "internal_node_id": "0.0-19.10-1.10"
+    },
+    {
+        "rt": 667.0499999891035,
+        "stimulus": "<p>Choose a box,</p>",
+        "button_pressed": 0,
+        "trial_type": "html-button-response",
+        "trial_index": 46,
+        "time_elapsed": 198918,
+        "internal_node_id": "0.0-19.11-0.11"
+    },
+    {
+        "rate": 0.7827514045230177,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 47,
+        "time_elapsed": 198918,
+        "internal_node_id": "0.0-19.11-1.11"
+    },
+    {
+        "rt": null,
+        "stimulus": "<div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >You won a prize! Well done!</h1><div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >Only 12 left to go!</h1><img id=\"box\" src=\"img/prizes/yoyo.png\"></img><img id=\"box\" src=\"img/empty/blueopenbox.png\"></img></div>",
+        "key_press": null,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 47,
+        "time_elapsed": 200421,
+        "internal_node_id": "0.0-19.11-1.11"
+    },
+    {
+        "rt": 313.3850000449456,
+        "stimulus": "<p>Choose a box,</p>",
+        "button_pressed": 3,
+        "trial_type": "html-button-response",
+        "trial_index": 48,
+        "time_elapsed": 200737,
+        "internal_node_id": "0.0-19.12-0.12"
+    },
+    {
+        "rate": 0.4804843529333029,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 49,
+        "time_elapsed": 200737,
+        "internal_node_id": "0.0-19.12-1.12"
+    },
+    {
+        "rt": null,
+        "stimulus": "<div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >You won a prize! Well done!</h1><div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >Only 11 left to go!</h1><img id=\"box\" src=\"img/prizes/flowers.png\"></img><img id=\"box\" src=\"img/empty/redopenbox.png\"></img></div>",
+        "key_press": null,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 49,
+        "time_elapsed": 202240,
+        "internal_node_id": "0.0-19.12-1.12"
+    },
+    {
+        "rt": 377.2500000195578,
+        "stimulus": "<p>Choose a box,</p>",
+        "button_pressed": 2,
+        "trial_type": "html-button-response",
+        "trial_index": 50,
+        "time_elapsed": 202620,
+        "internal_node_id": "0.0-19.13-0.13"
+    },
+    {
+        "rate": 0.332862185204114,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 51,
+        "time_elapsed": 202621,
+        "internal_node_id": "0.0-19.13-1.13"
+    },
+    {
+        "rt": null,
+        "stimulus": "<div style=\"background-color:#ff7157\"><h1 style=\"background-color:Tomato\">Bad luck! There was no prize in the box!</h1><h1 style=\"background-color:Tomato\">Remember, you need to keep going until you have 20 prizes!</h1><img id=\"box\" src=\"img/sad/purpleopenboxsadthumb.png\"></img></div>",
+        "key_press": null,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 51,
+        "time_elapsed": 204123,
+        "internal_node_id": "0.0-19.13-1.13"
+    },
+    {
+        "rt": 413.0299999960698,
+        "stimulus": "<p>Choose a box,</p>",
+        "button_pressed": 0,
+        "trial_type": "html-button-response",
+        "trial_index": 52,
+        "time_elapsed": 204538,
+        "internal_node_id": "0.0-19.14-0.14"
+    },
+    {
+        "rate": 0.7827514045230177,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 53,
+        "time_elapsed": 204538,
+        "internal_node_id": "0.0-19.14-1.14"
+    },
+    {
+        "rt": null,
+        "stimulus": "<div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >You won a prize! Well done!</h1><div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >Only 10 left to go!</h1><img id=\"box\" src=\"img/prizes/duck.png\"></img><img id=\"box\" src=\"img/empty/blueopenbox.png\"></img></div>",
+        "key_press": null,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 53,
+        "time_elapsed": 206040,
+        "internal_node_id": "0.0-19.14-1.14"
+    },
+    {
+        "rt": 359.4250000314787,
+        "stimulus": "<p>Choose a box,</p>",
+        "button_pressed": 0,
+        "trial_type": "html-button-response",
+        "trial_index": 54,
+        "time_elapsed": 206402,
+        "internal_node_id": "0.0-19.15-0.15"
+    },
+    {
+        "rate": 0.7827514045230177,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 55,
+        "time_elapsed": 206403,
+        "internal_node_id": "0.0-19.15-1.15"
+    },
+    {
+        "rt": null,
+        "stimulus": "<div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >You won a prize! Well done!</h1><div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >Only 9 left to go!</h1><img id=\"box\" src=\"img/prizes/duck.png\"></img><img id=\"box\" src=\"img/empty/blueopenbox.png\"></img></div>",
+        "key_press": null,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 55,
+        "time_elapsed": 207906,
+        "internal_node_id": "0.0-19.15-1.15"
+    },
+    {
+        "rt": 383.0500000040047,
+        "stimulus": "<p>Choose a box,</p>",
+        "button_pressed": 0,
+        "trial_type": "html-button-response",
+        "trial_index": 56,
+        "time_elapsed": 208292,
+        "internal_node_id": "0.0-19.16-0.16"
+    },
+    {
+        "rate": 0.7827514045230177,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 57,
+        "time_elapsed": 208292,
+        "internal_node_id": "0.0-19.16-1.16"
+    },
+    {
+        "rt": null,
+        "stimulus": "<div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >You won a prize! Well done!</h1><div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >Only 8 left to go!</h1><img id=\"box\" src=\"img/prizes/lolipop.png\"></img><img id=\"box\" src=\"img/empty/blueopenbox.png\"></img></div>",
+        "key_press": null,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 57,
+        "time_elapsed": 209795,
+        "internal_node_id": "0.0-19.16-1.16"
+    },
+    {
+        "rt": 559.6249999944121,
+        "stimulus": "<p>Choose a box,</p>",
+        "button_pressed": 1,
+        "trial_type": "html-button-response",
+        "trial_index": 58,
+        "time_elapsed": 210358,
+        "internal_node_id": "0.0-19.17-0.17"
+    },
+    {
+        "rate": 0.6395140543802668,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 59,
+        "time_elapsed": 210358,
+        "internal_node_id": "0.0-19.17-1.17"
+    },
+    {
+        "rt": null,
+        "stimulus": "<div style=\"background-color:#ff7157\"><h1 style=\"background-color:Tomato\">Bad luck! There was no prize in the box!</h1><h1 style=\"background-color:Tomato\">Remember, you need to keep going until you have 20 prizes!</h1><img id=\"box\" src=\"img/sad/greenopenboxsadthumb.png\"></img></div>",
+        "key_press": null,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 59,
+        "time_elapsed": 211862,
+        "internal_node_id": "0.0-19.17-1.17"
+    },
+    {
+        "rt": 715.5999999959022,
+        "stimulus": "<p>Choose a box,</p>",
+        "button_pressed": 3,
+        "trial_type": "html-button-response",
+        "trial_index": 60,
+        "time_elapsed": 212580,
+        "internal_node_id": "0.0-19.18-0.18"
+    },
+    {
+        "rate": 0.4804843529333029,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 61,
+        "time_elapsed": 212581,
+        "internal_node_id": "0.0-19.18-1.18"
+    },
+    {
+        "rt": null,
+        "stimulus": "<div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >You won a prize! Well done!</h1><div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >Only 7 left to go!</h1><img id=\"box\" src=\"img/prizes/yoyo.png\"></img><img id=\"box\" src=\"img/empty/redopenbox.png\"></img></div>",
+        "key_press": null,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 61,
+        "time_elapsed": 214083,
+        "internal_node_id": "0.0-19.18-1.18"
+    },
+    {
+        "rt": 159.35500001069158,
+        "stimulus": "<p>Choose a box,</p>",
+        "button_pressed": 3,
+        "trial_type": "html-button-response",
+        "trial_index": 62,
+        "time_elapsed": 214251,
+        "internal_node_id": "0.0-19.19-0.19"
+    },
+    {
+        "rate": 0.4804843529333029,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 63,
+        "time_elapsed": 214251,
+        "internal_node_id": "0.0-19.19-1.19"
+    },
+    {
+        "rt": null,
+        "stimulus": "<div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >You won a prize! Well done!</h1><div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >Only 6 left to go!</h1><img id=\"box\" src=\"img/prizes/lolipop.png\"></img><img id=\"box\" src=\"img/empty/redopenbox.png\"></img></div>",
+        "key_press": null,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 63,
+        "time_elapsed": 215754,
+        "internal_node_id": "0.0-19.19-1.19"
+    },
+    {
+        "rt": 365.27499998919666,
+        "stimulus": "<p>Choose a box,</p>",
+        "button_pressed": 3,
+        "trial_type": "html-button-response",
+        "trial_index": 64,
+        "time_elapsed": 216123,
+        "internal_node_id": "0.0-19.20-0.20"
+    },
+    {
+        "rate": 0.4804843529333029,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 65,
+        "time_elapsed": 216123,
+        "internal_node_id": "0.0-19.20-1.20"
+    },
+    {
+        "rt": null,
+        "stimulus": "<div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >You won a prize! Well done!</h1><div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >Only 5 left to go!</h1><img id=\"box\" src=\"img/prizes/bear.png\"></img><img id=\"box\" src=\"img/empty/redopenbox.png\"></img></div>",
+        "key_press": null,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 65,
+        "time_elapsed": 217626,
+        "internal_node_id": "0.0-19.20-1.20"
+    },
+    {
+        "rt": 423.90499997418374,
+        "stimulus": "<p>Choose a box,</p>",
+        "button_pressed": 0,
+        "trial_type": "html-button-response",
+        "trial_index": 66,
+        "time_elapsed": 218052,
+        "internal_node_id": "0.0-19.21-0.21"
+    },
+    {
+        "rate": 0.7827514045230177,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 67,
+        "time_elapsed": 218052,
+        "internal_node_id": "0.0-19.21-1.21"
+    },
+    {
+        "rt": null,
+        "stimulus": "<div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >You won a prize! Well done!</h1><div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >Only 4 left to go!</h1><img id=\"box\" src=\"img/prizes/yoyo.png\"></img><img id=\"box\" src=\"img/empty/blueopenbox.png\"></img></div>",
+        "key_press": null,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 67,
+        "time_elapsed": 219556,
+        "internal_node_id": "0.0-19.21-1.21"
+    },
+    {
+        "rt": 1100.090000021737,
+        "stimulus": "<p>Choose a box,</p>",
+        "button_pressed": 3,
+        "trial_type": "html-button-response",
+        "trial_index": 68,
+        "time_elapsed": 220659,
+        "internal_node_id": "0.0-19.22-0.22"
+    },
+    {
+        "rate": 0.4804843529333029,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 69,
+        "time_elapsed": 220659,
+        "internal_node_id": "0.0-19.22-1.22"
+    },
+    {
+        "rt": null,
+        "stimulus": "<div style=\"background-color:#ff7157\"><h1 style=\"background-color:Tomato\">Bad luck! There was no prize in the box!</h1><h1 style=\"background-color:Tomato\">Remember, you need to keep going until you have 20 prizes!</h1><img id=\"box\" src=\"img/sad/redopenboxsadthumb.png\"></img></div>",
+        "key_press": null,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 69,
+        "time_elapsed": 222162,
+        "internal_node_id": "0.0-19.22-1.22"
+    },
+    {
+        "rt": 322.4599999957718,
+        "stimulus": "<p>Choose a box,</p>",
+        "button_pressed": 0,
+        "trial_type": "html-button-response",
+        "trial_index": 70,
+        "time_elapsed": 222487,
+        "internal_node_id": "0.0-19.23-0.23"
+    },
+    {
+        "rate": 0.7827514045230177,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 71,
+        "time_elapsed": 222488,
+        "internal_node_id": "0.0-19.23-1.23"
+    },
+    {
+        "rt": null,
+        "stimulus": "<div style=\"background-color:#ff7157\"><h1 style=\"background-color:Tomato\">Bad luck! There was no prize in the box!</h1><h1 style=\"background-color:Tomato\">Remember, you need to keep going until you have 20 prizes!</h1><img id=\"box\" src=\"img/sad/blueopenboxsadthumb.png\"></img></div>",
+        "key_press": null,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 71,
+        "time_elapsed": 223991,
+        "internal_node_id": "0.0-19.23-1.23"
+    },
+    {
+        "rt": 341.794999956619,
+        "stimulus": "<p>Choose a box,</p>",
+        "button_pressed": 2,
+        "trial_type": "html-button-response",
+        "trial_index": 72,
+        "time_elapsed": 224336,
+        "internal_node_id": "0.0-19.24-0.24"
+    },
+    {
+        "rate": 0.332862185204114,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 73,
+        "time_elapsed": 224337,
+        "internal_node_id": "0.0-19.24-1.24"
+    },
+    {
+        "rt": null,
+        "stimulus": "<div style=\"background-color:#ff7157\"><h1 style=\"background-color:Tomato\">Bad luck! There was no prize in the box!</h1><h1 style=\"background-color:Tomato\">Remember, you need to keep going until you have 20 prizes!</h1><img id=\"box\" src=\"img/sad/purpleopenboxsadthumb.png\"></img></div>",
+        "key_press": null,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 73,
+        "time_elapsed": 225843,
+        "internal_node_id": "0.0-19.24-1.24"
+    },
+    {
+        "rt": 314.684999990277,
+        "stimulus": "<p>Choose a box,</p>",
+        "button_pressed": 1,
+        "trial_type": "html-button-response",
+        "trial_index": 74,
+        "time_elapsed": 226162,
+        "internal_node_id": "0.0-19.25-0.25"
+    },
+    {
+        "rate": 0.6395140543802668,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 75,
+        "time_elapsed": 226163,
+        "internal_node_id": "0.0-19.25-1.25"
+    },
+    {
+        "rt": null,
+        "stimulus": "<div style=\"background-color:#ff7157\"><h1 style=\"background-color:Tomato\">Bad luck! There was no prize in the box!</h1><h1 style=\"background-color:Tomato\">Remember, you need to keep going until you have 20 prizes!</h1><img id=\"box\" src=\"img/sad/greenopenboxsadthumb.png\"></img></div>",
+        "key_press": null,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 75,
+        "time_elapsed": 227666,
+        "internal_node_id": "0.0-19.25-1.25"
+    },
+    {
+        "rt": 262.61000003432855,
+        "stimulus": "<p>Choose a box,</p>",
+        "button_pressed": 1,
+        "trial_type": "html-button-response",
+        "trial_index": 76,
+        "time_elapsed": 227931,
+        "internal_node_id": "0.0-19.26-0.26"
+    },
+    {
+        "rate": 0.6395140543802668,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 77,
+        "time_elapsed": 227931,
+        "internal_node_id": "0.0-19.26-1.26"
+    },
+    {
+        "rt": null,
+        "stimulus": "<div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >You won a prize! Well done!</h1><div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >Only 3 left to go!</h1><img id=\"box\" src=\"img/prizes/duck.png\"></img><img id=\"box\" src=\"img/empty/greenopenbox.png\"></img></div>",
+        "key_press": null,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 77,
+        "time_elapsed": 229435,
+        "internal_node_id": "0.0-19.26-1.26"
+    },
+    {
+        "rt": 238.23499999707565,
+        "stimulus": "<p>Choose a box,</p>",
+        "button_pressed": 1,
+        "trial_type": "html-button-response",
+        "trial_index": 78,
+        "time_elapsed": 229675,
+        "internal_node_id": "0.0-19.27-0.27"
+    },
+    {
+        "rate": 0.6395140543802668,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 79,
+        "time_elapsed": 229675,
+        "internal_node_id": "0.0-19.27-1.27"
+    },
+    {
+        "rt": null,
+        "stimulus": "<div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >You won a prize! Well done!</h1><div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >Only 2 left to go!</h1><img id=\"box\" src=\"img/prizes/coins.png\"></img><img id=\"box\" src=\"img/empty/greenopenbox.png\"></img></div>",
+        "key_press": null,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 79,
+        "time_elapsed": 231178,
+        "internal_node_id": "0.0-19.27-1.27"
+    },
+    {
+        "rt": 199.3650000076741,
+        "stimulus": "<p>Choose a box,</p>",
+        "button_pressed": 1,
+        "trial_type": "html-button-response",
+        "trial_index": 80,
+        "time_elapsed": 231381,
+        "internal_node_id": "0.0-19.28-0.28"
+    },
+    {
+        "rate": 0.6395140543802668,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 81,
+        "time_elapsed": 231381,
+        "internal_node_id": "0.0-19.28-1.28"
+    },
+    {
+        "rt": null,
+        "stimulus": "<div style=\"background-color:#ff7157\"><h1 style=\"background-color:Tomato\">Bad luck! There was no prize in the box!</h1><h1 style=\"background-color:Tomato\">Remember, you need to keep going until you have 20 prizes!</h1><img id=\"box\" src=\"img/sad/greenopenboxsadthumb.png\"></img></div>",
+        "key_press": null,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 81,
+        "time_elapsed": 232884,
+        "internal_node_id": "0.0-19.28-1.28"
+    },
+    {
+        "rt": 744.9200000264682,
+        "stimulus": "<p>Choose a box,</p>",
+        "button_pressed": 3,
+        "trial_type": "html-button-response",
+        "trial_index": 82,
+        "time_elapsed": 233632,
+        "internal_node_id": "0.0-19.29-0.29"
+    },
+    {
+        "rate": 0.4804843529333029,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 83,
+        "time_elapsed": 233632,
+        "internal_node_id": "0.0-19.29-1.29"
+    },
+    {
+        "rt": null,
+        "stimulus": "<div style=\"background-color:#ff7157\"><h1 style=\"background-color:Tomato\">Bad luck! There was no prize in the box!</h1><h1 style=\"background-color:Tomato\">Remember, you need to keep going until you have 20 prizes!</h1><img id=\"box\" src=\"img/sad/redopenboxsadthumb.png\"></img></div>",
+        "key_press": null,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 83,
+        "time_elapsed": 235136,
+        "internal_node_id": "0.0-19.29-1.29"
+    },
+    {
+        "rt": 319.18500002939254,
+        "stimulus": "<p>Choose a box,</p>",
+        "button_pressed": 3,
+        "trial_type": "html-button-response",
+        "trial_index": 84,
+        "time_elapsed": 235457,
+        "internal_node_id": "0.0-19.30-0.30"
+    },
+    {
+        "rate": 0.4804843529333029,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 85,
+        "time_elapsed": 235458,
+        "internal_node_id": "0.0-19.30-1.30"
+    },
+    {
+        "rt": null,
+        "stimulus": "<div style=\"background-color:#ff7157\"><h1 style=\"background-color:Tomato\">Bad luck! There was no prize in the box!</h1><h1 style=\"background-color:Tomato\">Remember, you need to keep going until you have 20 prizes!</h1><img id=\"box\" src=\"img/sad/redopenboxsadthumb.png\"></img></div>",
+        "key_press": null,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 85,
+        "time_elapsed": 236961,
+        "internal_node_id": "0.0-19.30-1.30"
+    },
+    {
+        "rt": 451.9999999902211,
+        "stimulus": "<p>Choose a box,</p>",
+        "button_pressed": 2,
+        "trial_type": "html-button-response",
+        "trial_index": 86,
+        "time_elapsed": 237415,
+        "internal_node_id": "0.0-19.31-0.31"
+    },
+    {
+        "rate": 0.332862185204114,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 87,
+        "time_elapsed": 237416,
+        "internal_node_id": "0.0-19.31-1.31"
+    },
+    {
+        "rt": null,
+        "stimulus": "<div style=\"background-color:#ff7157\"><h1 style=\"background-color:Tomato\">Bad luck! There was no prize in the box!</h1><h1 style=\"background-color:Tomato\">Remember, you need to keep going until you have 20 prizes!</h1><img id=\"box\" src=\"img/sad/purpleopenboxsadthumb.png\"></img></div>",
+        "key_press": null,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 87,
+        "time_elapsed": 238919,
+        "internal_node_id": "0.0-19.31-1.31"
+    },
+    {
+        "rt": 344.1499999607913,
+        "stimulus": "<p>Choose a box,</p>",
+        "button_pressed": 2,
+        "trial_type": "html-button-response",
+        "trial_index": 88,
+        "time_elapsed": 239266,
+        "internal_node_id": "0.0-19.32-0.32"
+    },
+    {
+        "rate": 0.332862185204114,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 89,
+        "time_elapsed": 239266,
+        "internal_node_id": "0.0-19.32-1.32"
+    },
+    {
+        "rt": null,
+        "stimulus": "<div style=\"background-color:#ff7157\"><h1 style=\"background-color:Tomato\">Bad luck! There was no prize in the box!</h1><h1 style=\"background-color:Tomato\">Remember, you need to keep going until you have 20 prizes!</h1><img id=\"box\" src=\"img/sad/purpleopenboxsadthumb.png\"></img></div>",
+        "key_press": null,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 89,
+        "time_elapsed": 240777,
+        "internal_node_id": "0.0-19.32-1.32"
+    },
+    {
+        "rt": 357.69999999320135,
+        "stimulus": "<p>Choose a box,</p>",
+        "button_pressed": 2,
+        "trial_type": "html-button-response",
+        "trial_index": 90,
+        "time_elapsed": 241137,
+        "internal_node_id": "0.0-19.33-0.33"
+    },
+    {
+        "rate": 0.332862185204114,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 91,
+        "time_elapsed": 241138,
+        "internal_node_id": "0.0-19.33-1.33"
+    },
+    {
+        "rt": null,
+        "stimulus": "<div style=\"background-color:#ff7157\"><h1 style=\"background-color:Tomato\">Bad luck! There was no prize in the box!</h1><h1 style=\"background-color:Tomato\">Remember, you need to keep going until you have 20 prizes!</h1><img id=\"box\" src=\"img/sad/purpleopenboxsadthumb.png\"></img></div>",
+        "key_press": null,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 91,
+        "time_elapsed": 242641,
+        "internal_node_id": "0.0-19.33-1.33"
+    },
+    {
+        "rt": 289.7649999940768,
+        "stimulus": "<p>Choose a box,</p>",
+        "button_pressed": 2,
+        "trial_type": "html-button-response",
+        "trial_index": 92,
+        "time_elapsed": 242933,
+        "internal_node_id": "0.0-19.34-0.34"
+    },
+    {
+        "rate": 0.332862185204114,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 93,
+        "time_elapsed": 242934,
+        "internal_node_id": "0.0-19.34-1.34"
+    },
+    {
+        "rt": null,
+        "stimulus": "<div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >You won a prize! Well done!</h1><div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >Only 1 left to go!</h1><img id=\"box\" src=\"img/prizes/ring.png\"></img><img id=\"box\" src=\"img/empty/purpleopenbox.png\"></img></div>",
+        "key_press": null,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 93,
+        "time_elapsed": 244436,
+        "internal_node_id": "0.0-19.34-1.34"
+    },
+    {
+        "rt": 191.96999998530373,
+        "stimulus": "<p>Choose a box,</p>",
+        "button_pressed": 2,
+        "trial_type": "html-button-response",
+        "trial_index": 94,
+        "time_elapsed": 244630,
+        "internal_node_id": "0.0-19.35-0.35"
+    },
+    {
+        "rate": 0.332862185204114,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 95,
+        "time_elapsed": 244630,
+        "internal_node_id": "0.0-19.35-1.35"
+    },
+    {
+        "rt": null,
+        "stimulus": "<div style=\"background-color:#ff7157\"><h1 style=\"background-color:Tomato\">Bad luck! There was no prize in the box!</h1><h1 style=\"background-color:Tomato\">Remember, you need to keep going until you have 20 prizes!</h1><img id=\"box\" src=\"img/sad/purpleopenboxsadthumb.png\"></img></div>",
+        "key_press": null,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 95,
+        "time_elapsed": 246132,
+        "internal_node_id": "0.0-19.35-1.35"
+    },
+    {
+        "rt": 298.7800000119023,
+        "stimulus": "<p>Choose a box,</p>",
+        "button_pressed": 1,
+        "trial_type": "html-button-response",
+        "trial_index": 96,
+        "time_elapsed": 246433,
+        "internal_node_id": "0.0-19.36-0.36"
+    },
+    {
+        "rate": 0.6395140543802668,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 97,
+        "time_elapsed": 246434,
+        "internal_node_id": "0.0-19.36-1.36"
+    },
+    {
+        "rt": null,
+        "stimulus": "<div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >You won a prize! Well done!</h1><div style=\"background-color:#6dce98\"><h1 style=\"background-color:MediumSeaGreen\" >Only 0 left to go!</h1><img id=\"box\" src=\"img/prizes/ring.png\"></img><img id=\"box\" src=\"img/empty/greenopenbox.png\"></img></div>",
+        "key_press": null,
+        "trial_type": "html-keyboard-response",
+        "trial_index": 97,
+        "time_elapsed": 247937,
+        "internal_node_id": "0.0-19.36-1.36"
+    },
+    {
+        "rt": 141299.17499999283,
+        "responses": "{\"Q0\":\"Interesting topic, but couldnt figure out how you could determine the decision making process through the choice given.\",\"Q1\":\"first 5 point i did random, but I realize the purple one is a dud, but I still try to click on that to confirm my suspicious.\\n\\nLater on, blue, green, and red always have present inside.\\n\\nThen only blue and red\\n\\nAnd lastly it looks like I need to choose the same present 3 times and fail to get present\"}",
+        "trial_type": "survey-text",
+        "trial_index": 98,
+        "time_elapsed": 389259,
+        "internal_node_id": "0.0-20.0"
+    }
+]
