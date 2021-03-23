@@ -55,20 +55,29 @@ def scorePANAS():
     p['NA_score']=NA
     p['PA_score']=PA
 
+def scorePHQ():
+    total = 0
+    for each in PHQ:
+        total += PHQ[each]
+    p['PHQ_score']=total
 
-
+def scoreGAD():
+    total = 0
+    for each in GAD:
+        total += GAD[each]
+    p['GAD_score']=total
 
 
 def store_item(r,index):
     r=r.split(":")
     if index ==11:
-        PHQ[r[0]]=r[1]
+        PHQ[r[0]]=int(r[1])
     elif index==12:
-        PHQ[r[0]+'b']=r[1]
+        PHQ[r[0]+'b']=int(r[1])
     elif index==13:
-        GAD[r[0]]=r[1]
+        GAD[r[0]]=int(r[1])
     else:
-        GAD[r[0]+'b'] =r[1]
+        GAD[r[0]+'b'] =int(r[1])
 
 
 
@@ -77,10 +86,10 @@ def split_line(r,index):
     for each in r:
         store_item(each,index)
     
+filename = 'mab_04-03-21-191536.json'
 
 
-
-with open('mab_04-03-21-191536.json') as json_file:
+with open(filename) as json_file:
     data = json.load(json_file)
     for line in data:
         index = line['trial_index']
@@ -110,6 +119,7 @@ with open('mab_04-03-21-191536.json') as json_file:
             split_line(line['responses'],index)
             if index==12: 
                 p['PHQ']=PHQ
+                scorePHQ()
             #compute overall PHQ score
 
         
@@ -117,13 +127,15 @@ with open('mab_04-03-21-191536.json') as json_file:
             split_line(line['responses'],index)
             if index==14:
                 p['GAD']=GAD
+                scoreGAD()
 
         
-        """
-        elif index == len(data)-1:
-            print("END") #this doesnt work it just continues until game
-        elif index >22:
-            print("game") 
-        """
-print(p)
+        
+        elif line['trial_type']=="survey-text" and index>22:
+            p['length'] = index #saves how long the trial lasted
+      #  elif index >22:
+          #  print("playing")
+           
+    print(p)
+
         
