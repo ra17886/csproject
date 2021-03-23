@@ -88,6 +88,20 @@ def split_line(r,index):
     
 filename = 'mab_04-03-21-191536.json'
 
+def editName(n):
+    n = n.strip("mab")
+    n = "clean" + n
+    print(n)
+    return n
+
+def savefile():
+    writefile = './cleandata' + editName(filename)
+    with open(writefile, "x") as f:
+        json.dump(p,f) #ideally would want it all in one file 
+
+       
+
+
 
 with open(filename) as json_file:
     data = json.load(json_file)
@@ -133,6 +147,7 @@ with open(filename) as json_file:
         
         elif line['trial_type']=="survey-text" and index>22:
             p['length'] = index #saves how long the trial lasted
+            savefile()
       #  elif index >22:
           #  print("playing")
            
