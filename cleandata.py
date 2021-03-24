@@ -1,5 +1,6 @@
 import json
 import re
+import os
 
 p = dict()
 PANAS = dict()
@@ -7,16 +8,21 @@ PHQ = dict()
 GAD = dict()
 
 #when parsing strings, data starts after :\ and ends in \
+#need to create script that loops through this script and adds all to clean folder
+
+#CREATING A JSON THAT CONTAINS ANXIETY LEVELS AND LENGTH OF GAME
 
 def check_consent(r):
     return not "No" in r
 
 def store_age(r):
     substring = re.search(r'\"(.*)\"}', r).group(1)
+    print(substring)
     p["age"]=substring
 
 def store_gender(r):
     substring = re.search(r'\"(.*)\",\"Q1\"', r).group(1)
+    print(substring)
     p["gender"]=substring
 
 def strip_split(r):
@@ -86,26 +92,24 @@ def split_line(r,index):
     for each in r:
         store_item(each,index)
     
-filename = 'mab_04-03-21-191536.json'
+#filename = "mab/olddata/mab_04-03-21-191318.json" 
 
 def editName(n):
-    n = n.strip("mab")
-    n = "clean" + n
+    n = n.strip("mab/data/mab")
+    n = "length_trial/clean" + n
     print(n)
     return n
 
 def savefile():
-    writefile = './cleandata' + editName(filename)
+    print("creating file")
+    writefile = editName(filename)
     with open(writefile, "x") as f:
-        json.dump(p,f) #ideally would want it all in one file 
-
-       
+        json.dump(p,f)  
 
 
-
-with open(filename) as json_file:
-    data = json.load(json_file)
-    for line in data:
+def scanLength(json_file):
+     data = json.load(json_file)
+     for line in data:
         index = line['trial_index']
 
         if index == 1 or index== 2:
@@ -113,44 +117,50 @@ with open(filename) as json_file:
             if not consent:
                 print("Consent form void")
                 break
-     
+            
         #elif index==3:
-           # print("prolific") #need to delete this
+        # print("prolific") #need to delete this
 
         elif index==4:
-            gender_age(line['responses']) 
-        
-        
-        elif index < 11 and index > 5:
+            gender_age(line['responses'])        
+            
+        elif index < 11 and index > 6:
             split_PANAS_line(line['responses'])
             if index ==10:
                 p['PANAS']=PANAS
                 scorePANAS()
-            #maybe need to compute overall PANAS score?
+                #maybe need to compute overall PANAS score?
+                
             
-        
         elif index==11 or index ==12:
             split_line(line['responses'],index)
             if index==12: 
                 p['PHQ']=PHQ
                 scorePHQ()
-            #compute overall PHQ score
+                #compute overall PHQ score
 
-        
+            
         elif index==13 or index==14:
             split_line(line['responses'],index)
             if index==14:
                 p['GAD']=GAD
                 scoreGAD()
-
-        
-        
+            
         elif line['trial_type']=="survey-text" and index>22:
+            print("hello")
             p['length'] = index #saves how long the trial lasted
             savefile()
-      #  elif index >22:
-          #  print("playing")
-           
-    print(p)
+        #  elif index >22:
+            #  print("playing")
+
+directory ='mab/data'
+
+for filename in os.listdir(directory):
+    print(os.path.join(directory, filename))
+    if filename.endswith(".json"):
+        json_file = open(os.path.join(directory, filename),'r')
+        scanLength(json_file)
+        
+            
 
         
