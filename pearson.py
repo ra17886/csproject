@@ -20,48 +20,48 @@ def getDetails(data):
     trial_length.append(int(data['length']))
 
 def length_gad():
-    corr,_ = pearsonr(trial_length,gad)
+    corr, sig = pearsonr(trial_length,gad)
     plt.scatter(gad,trial_length)
     plt.xlabel('GAD Scores')
     plt.ylabel('Trial Length')
     plt.show()
-    print("length vs gad:", corr)
+    print("length vs gad:", corr, " ", sig)
 
 def length_phq():
-    corr,_ = pearsonr(trial_length,phq)
+    corr,sig = pearsonr(trial_length,phq)
     plt.scatter(phq,trial_length)
     plt.xlabel('PHQ Scores')
     plt.ylabel('Trial Length')
     plt.show()
-    print("length vs phq:", corr)
+    print("length vs phq:", corr, " ", sig)
 
 def length_panasNA():
-    corr,_ = pearsonr(trial_length,panasNA)
+    corr,sig = pearsonr(trial_length,panasNA)
     plt.scatter(phq,trial_length)
     plt.ylabel('Trial Length')
     plt.xlabel('PANAS Negative Affect Scores')
     plt.show()
-    print("length vs NA:", corr)
+    print("length vs NA:", corr, " ", sig)
 
 def length_panasPA():
-    corr,_ = pearsonr(trial_length,panasPA)
+    corr,sig = pearsonr(trial_length,panasPA)
     plt.scatter(phq,trial_length)
     plt.xlabel('PANAS Positive Affect Scores')
     plt.ylabel('Trial Length')
     plt.show()
-    print("length vs PA:", corr)
+    print("length vs PA:", corr, " ", sig)
 
 def interCorrelations():
-    corrGpa,_ = pearsonr(gad,panasPA)
-    corrGna,_ = pearsonr(gad,panasNA)
-    corrGph,_ = pearsonr(gad,phq)
-    corrPhpa,_ = pearsonr(phq,panasPA)
-    corrPhna,_ = pearsonr(phq,panasNA)
-    print("GAD vs PA:", corrGpa)
-    print("GAD vs NA:", corrGna)
-    print("GAD vs PHQ:", corrGph)
-    print("PHQ vs PA:", corrPhpa)
-    print("PHQ vs NA:", corrPhna)
+    corrGpa, sigA= pearsonr(gad,panasPA)
+    corrGna, sigB = pearsonr(gad,panasNA)
+    corrGph,sigC = pearsonr(gad,phq)
+    corrPhpa,sigD = pearsonr(phq,panasPA)
+    corrPhna,sigE = pearsonr(phq,panasNA)
+    print("GAD vs PA:", corrGpa, " ", sigA )
+    print("GAD vs NA:", corrGna, " ", sigB )
+    print("GAD vs PHQ:", corrGph, " ", sigC )
+    print("PHQ vs PA:", corrPhpa, " ", sigD )
+    print("PHQ vs NA:", corrPhna, " ", sigE )
 
 
 
