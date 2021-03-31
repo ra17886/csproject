@@ -239,7 +239,7 @@ var experiment_instructions = {
 }
 timeline.push(experiment_instructions)
 
-  function correctDistance(a,b){
+function correctDistance(a,b){
     return a-b>0.1
   }
 
