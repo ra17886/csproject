@@ -2,12 +2,12 @@ import numpy as np
 import random
 
 r= [0] * 4
-w = 3 #loss aversion parameter
-u =[0.5]*4
-a = 0.5 #recency parameter
-Ev = [0.5] *4
-prob =[0.5]*4
-c = 2
+w = 1 #loss aversion parameter
+u =[0]*4
+a = 0.9 #recency parameter
+Ev = [0.25] *4
+prob =[0.25]*4
+c = 4
 
 def check(a,b):
     return a-b>0.1
@@ -20,7 +20,15 @@ def generateRewardRates():
     while not checkAll(r[0],r[1],r[2],r[3]):
         r = [np.random.beta(2,2) for x in r]
     random.shuffle(r)
-    print(r)
+
+def resetParams():
+    r= [0] * 4
+    w = 1 #loss aversion parameter
+    u =[0]*4
+    a = 0.5 #recency parameter
+    Ev = [0] *4
+    prob =[0.25]*4
+    c = 2.5
 
 def drawPrize(box):
     n = np.random.rand()
@@ -42,41 +50,63 @@ def learning(k):
     global Ev
     global a
     for e in range(4):
-        Ev[e] = a*Ev[e]
+        Ev[e] = round(a*Ev[e],6)
         if e ==k: Ev[e]+=u[k]
     print("Learning: ", Ev)
 
 def total():
     global Ev
     global c
-    theta = (3^c)-1
-    l = [np.exp(theta)*e for e in Ev]
-    return sum(l)
+    b = Ev.max() #shift invariant
+    theta = round((3**c)-1,6)
+    l = [np.exp(theta*e-b) for e in Ev]
+    return sum(l), b
 
-def updateProb():
+def updateProb(): 
     global prob
-    t = total()
+    global c
+    
+    b = max(Ev)
+    theta = ((3**c)-1)
+
+    t = sum([np.exp(theta*e-b)for e in Ev])
+
     for p in range(4):
-        prob[p] = Ev[p]/t
-    print("Probabilities: ", prob)
+        prob[p] = np.exp(Ev[p]*theta-b)/t
+
+    rounded = [round(e,4) for e in prob]
+    print("Probabilities: ", rounded)
+    
 
 def chooseBox():
     global prob
-    return prob.index(max(prob))
+    box = np.random.choice([0,1,2,3], p=prob)
+    return box
+
+
 
 def startGame():
-    generateRewardRates()
-    for i in range(12):
+    rewardTotal = 0
+    for i in range(1000):
+        print(f"\n")
         k = chooseBox()
         print("choosing: ", k)
 
         reward = drawPrize(k)
+        rewardTotal+= reward
         if reward ==1: print("Prize!")
         else: print("no Prize")
 
         prospectUtility(k,reward)
         learning(k)
         updateProb()
+        print("Actual Values: ",r)
+        print("Total Reward: ", rewardTotal)
 
 
+
+
+        
+
+generateRewardRates()
 startGame()
