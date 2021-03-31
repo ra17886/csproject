@@ -87,7 +87,7 @@ def chooseBox():
 
 def startGame():
     rewardTotal = 0
-    for i in range(1000):
+    for i in range(50):
         print(f"\n")
         k = chooseBox()
         print("choosing: ", k)
