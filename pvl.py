@@ -3,7 +3,7 @@ import random
 import game
 
 r= [0] * 4
-w = 4 #loss aversion parameter
+w = 1 #loss aversion parameter
 u =[0]*4
 a = 0.2 #recency parameter
 Ev = [0.25] *4
@@ -43,25 +43,27 @@ def chooseBox():
     box = np.random.choice([0,1,2,3], p=prob)
     return box
 
+def playRound():
+    print(f"\n")
+    k = chooseBox()
+    print("choosing: ", k)
+
+    reward = game.drawPrize(r,k)
+    if reward ==1: print("Prize!")
+    else: print("no Prize")
+
+    prospectUtility(k,reward)
+    learning(k)
+    updateProb()
+    print("Actual Values: ",r)
+    return(reward)
 
 def startGame():
     rewardTotal = 0
     for i in range(1000):
-        print(f"\n")
-        k = chooseBox()
-        print("choosing: ", k)
-
-        reward = game.drawPrize(r,k)
-        rewardTotal+= reward
-        if reward ==1: print("Prize!")
-        else: print("no Prize")
-
-        prospectUtility(k,reward)
-        learning(k)
-        updateProb()
-        print("Actual Values: ",r)
+        reward = playRound()
+        rewardTotal += reward
         print("Total Reward: ", rewardTotal)
        
-
 r = game.generateRewardRates()
 startGame()

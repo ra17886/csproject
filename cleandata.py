@@ -6,11 +6,13 @@ p = dict()
 PANAS = dict()
 PHQ = dict()
 GAD = dict()
+rewards = []
+options = []
+rates = []
 
-#when parsing strings, data starts after :\ and ends in \
-#need to create script that loops through this script and adds all to clean folder
 
 #CREATING A JSON THAT CONTAINS ANXIETY LEVELS AND LENGTH OF GAME
+#ALSO CREATES ARRAY OF BOXES CHOSEN AND REWARDS
 
 def check_consent(r):
     return not "No" in r
@@ -86,17 +88,36 @@ def store_item(r,index):
         GAD[r[0]+'b'] =int(r[1])
 
 
-
 def split_line(r,index):
     r = strip_split(r)
     for each in r:
         store_item(each,index)
-    
-#filename = "mab/olddata/mab_04-03-21-191318.json" 
+
+def extract_arm(r):
+    arm = r["button_pressed"]
+    options.append(arm)
+
+def extract_rate(r):
+    rate = r["rate"]
+    rates.append(rate)
+
+def extract_prize(r):
+    if "#ff7157" in r["stimulus"]: prize = 0
+    if "#6dce98" in r["stimulus"]: prize = 1
+    rewards.append(prize)
+
+def play(r):
+    if r['trial_type'] =="html-button-response": extract_arm(r)
+    elif "rate" in r: extract_rate(r)
+    elif "stimulus" in r: extract_prize(r)
+    #scan each for each type then divert to its own individual function 
+
+#To test just one file, uncomment line below
+#filename = "mab/data/mab_05-03-21-154538.json" 
 
 def editName(n):
     n = n.strip("mab/data/mab")
-    n = "length_trial/clean" + n
+    n = "options_trial/clean" + n
     print(n)
     return n
 
@@ -129,7 +150,7 @@ def scanLength(json_file):
             if index ==10:
                 p['PANAS']=PANAS
                 scorePANAS()
-                #maybe need to compute overall PANAS score?
+                
                 
             
         elif index==11 or index ==12:
@@ -137,7 +158,7 @@ def scanLength(json_file):
             if index==12: 
                 p['PHQ']=PHQ
                 scorePHQ()
-                #compute overall PHQ score
+                
 
             
         elif index==13 or index==14:
@@ -147,20 +168,27 @@ def scanLength(json_file):
                 scoreGAD()
             
         elif line['trial_type']=="survey-text" and index>22:
-            print("hello")
             p['length'] = index #saves how long the trial lasted
+            p['options'] = options
+            p['rates'] = rates
+            p['rewards'] = rewards
             savefile()
-        #  elif index >22:
-            #  print("playing")
+        elif index >22:
+              play(line)
+    
 
 directory ='mab/data'
 
+#To create all data, uncomment line below
 for filename in os.listdir(directory):
     print(os.path.join(directory, filename))
     if filename.endswith(".json"):
         json_file = open(os.path.join(directory, filename),'r')
         scanLength(json_file)
-        
+
+#json_file = open(filename, 'r')        
+#scanLength(json_file)
+#print(p)
             
 
         
