@@ -239,7 +239,7 @@ var experiment_instructions = {
 }
 timeline.push(experiment_instructions)
 
-function correctDistance(a,b){
+  function correctDistance(a,b){
     return a-b>0.1
   }
 
@@ -268,10 +268,10 @@ function correctDistance(a,b){
         r2 = r.splice(random, 1)[0];
 
         var random = Math.floor(Math.random() * r.length);
-        r3 = r.splice(random, 1)[0];
+        r3 = r.splice(random, 1)[0]; 
 
         var random = Math.floor(Math.random() * r.length);
-        r4 = r.splice(random, 1)[0];
+        r4 = r.splice(random, 1)[0]; //shuffling list 
 
      
   }
