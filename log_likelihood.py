@@ -1,10 +1,12 @@
-#import pvl 
+import pvl 
 import json
+import numpy as np 
+
 w = 1
 a = 0.4
 c = 3
 
-filename = 'options_trial/clean_05-03-21-153517.json'
+filename = 'options_trial/clean_05-03-21-154538.json'
 json_file = open(filename, 'r')
 
 
@@ -18,18 +20,19 @@ def getInfo(json_file):
 def computeLikelihood(json_file, w, a, c):
     rewards, options = getInfo(json_file)
     print(options)
-    likelihood = [0.25]
+    likelihoods = [0.25]
+    u = [0]*4
+    Ev = [0.25]*4
+    prob = [0.25]*4
+    for i in range(len(options)-1):
+        u, Ev, prob = pvl.participantCalc(w,u,a,Ev,prob,c,rewards[i],options[i])
+        likelihoods.append(prob[options[i+1]])
+    return np.sum([-np.log(x) for x in likelihoods])
 
-    for i in range(len(options)):
-        print(i)
 
-    #loop starts here
-    #get first reward and pass to pvl
-    #pvl should return updated u, ev and prob
     #then get the second option and add corresponding prob to likelihood array
 
-
-computeLikelihood(json_file, w, a, c)
+likelihood = computeLikelihood(json_file, w, a, c)
 
 
 

@@ -3,28 +3,28 @@ import random
 import game
 
 r= [0] * 4
-w = 1 #loss aversion parameter
-u =[0]*4
-a = 0.2 #recency parameter
-Ev = [0.25] *4
-prob =[0.25]*4
-c = 2.7
+#w = 1 #loss aversion parameter
+#u =[0]*4
+#a = 0.2 #recency parameter
+#Ev = [1] *4
+#prob =[0.25]*4
+#c = 2.7
 
 
-def prospectUtility(k,reward,u):
+def prospectUtility(k,reward,u,w):
     if reward ==1: u[k] = 1
     else: u[k] = -w #slightly adjusted from original to suit no reward vs reward
-    print("Utility: ", u)
+   # print("Utility: ", u)
     return u
 
-def learning(k, Ev , a):
+def learning(k, Ev , a, u):
     for e in range(4):
         Ev[e] = round(a*Ev[e],6)
         if e ==k: Ev[e]+=u[k]
-    print("Learning: ", Ev)
+  #  print("Learning: ", Ev)
     return Ev
 
-def updateProb(prob , c): 
+def updateProb(prob , c, Ev): 
     
     theta = ((3**c)-1)
     b = max(Ev)*theta
@@ -32,7 +32,7 @@ def updateProb(prob , c):
     for p in range(4):
         prob[p] = np.exp(Ev[p]*theta-b)/t
     rounded = [round(e,4) for e in prob]
-    print("Probabilities: ", rounded)
+    #print("Probabilities: ", rounded)
     return prob
     
 
@@ -51,8 +51,8 @@ def playRoundPVL(w, u, a, Ev, prob, c):
     else: print("no Prize")
 
     u_updated = prospectUtility(k,reward,u)
-    Ev_updated = learning(k, Ev, a)
-    prob_updated = updateProb(prob, c)
+    Ev_updated = learning(k, Ev, a, u_updated)
+    prob_updated = updateProb(prob, c, Ev_updated)
     print("Actual Values: ",r)
     return reward, u_updated, Ev_updated, prob_updated
 
@@ -66,3 +66,9 @@ def startGame(w, u, a, Ev, prob, c):
        
 #r = game.generateRewardRates()
 #startGame(w, u, a, Ev, prob, c)
+
+def participantCalc(w, u , a, Ev, prob, c, reward, option):
+    u_updated = prospectUtility(option, reward, u,w)
+    Ev_updated = learning(option, Ev, a, u_updated)
+    prob_updated = updateProb(prob, c, Ev_updated)
+    return u_updated, Ev_updated, prob_updated
