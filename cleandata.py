@@ -127,8 +127,18 @@ def savefile():
     with open(writefile, "x") as f:
         json.dump(p,f)  
 
+def resetParams():
+    global rewards
+    global options
+    global rates
+
+    rewards.clear()
+    options.clear()
+    rates.clear()
+
 
 def scanLength(json_file):
+     resetParams()
      data = json.load(json_file)
      for line in data:
         index = line['trial_index']
@@ -138,7 +148,7 @@ def scanLength(json_file):
             if not consent:
                 print("Consent form void")
                 break
-            
+           
         #elif index==3:
         # print("prolific") #need to delete this
 
