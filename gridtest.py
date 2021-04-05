@@ -1,4 +1,4 @@
-import log_likelihood as loglklhd
+import log_likelihood as log_lklhd
 
 #filename = 'options_trial/clean_05-03-21-155231.json'
 
@@ -12,7 +12,7 @@ def gridtest(filename):
             for c in range(50):
                 wc_scale = 0.1
                 a_scale = 0.02
-                likelihood = loglklhd.computeLikelihood(filename,w*wc_scale, a*a_scale, c*wc_scale)
+                likelihood = log_lklhd.computeLikelihood(filename,w*wc_scale, a*a_scale, c*wc_scale)
                 if likelihood < min: 
                     min = likelihood
                     w_opt = w*wc_scale

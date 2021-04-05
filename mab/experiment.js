@@ -93,6 +93,12 @@ var r4=0
   };
   timeline.push(gender_age);
 
+  var antidepressants={
+    type:'survey-text',
+    questions:[{prompt:"If you are currently taking an anti-depressant. Please enter which one in the box below."}]
+  }
+  timeline.push(antidepressants);
+
    
   var welcome_survey ={
     type:'instructions',
@@ -268,10 +274,10 @@ timeline.push(experiment_instructions)
         r2 = r.splice(random, 1)[0];
 
         var random = Math.floor(Math.random() * r.length);
-        r3 = r.splice(random, 1)[0]; 
+        r3 = r.splice(random, 1)[0];
 
         var random = Math.floor(Math.random() * r.length);
-        r4 = r.splice(random, 1)[0]; //shuffling list 
+        r4 = r.splice(random, 1)[0];
 
      
   }

@@ -76,22 +76,22 @@ def scoreGAD():
     p['GAD_score']=total
 
 
-def store_item(r,index):
+def store_item(r,index,p):
     r=r.split(":")
-    if index ==11:
+    if index ==p+1:
         PHQ[r[0]]=int(r[1])
-    elif index==12:
+    elif index==p+2:
         PHQ[r[0]+'b']=int(r[1])
-    elif index==13:
+    elif index==p+3:
         GAD[r[0]]=int(r[1])
     else:
         GAD[r[0]+'b'] =int(r[1])
 
 
-def split_line(r,index):
+def split_line(r,index,p):
     r = strip_split(r)
     for each in r:
-        store_item(each,index)
+        store_item(each,index,p)
 
 def extract_arm(r):
     arm = r["button_pressed"]
@@ -113,7 +113,7 @@ def play(r):
     #scan each for each type then divert to its own individual function 
 
 #To test just one file, uncomment line below
-#filename = "mab/data/mab_05-03-21-154538.json" 
+#filename = "mab/data/mab_05-03-21-155345.json" 
 
 def editName(n):
     n = n.strip("mab/data/mab")
@@ -140,44 +140,38 @@ def resetParams():
 def scanLength(json_file):
      resetParams()
      data = json.load(json_file)
+     PANAS_index = 100000
      for line in data:
+        
         index = line['trial_index']
-
-        if index == 1 or index== 2:
-            consent = check_consent(line['responses'])
-            if not consent:
-                print("Consent form void")
-                break
-           
         #elif index==3:
         # print("prolific") #need to delete this
 
-        elif index==4:
+        if "responses" in line and ("Male" in line['responses'] or "Female" in line['responses']):
             gender_age(line['responses'])        
             
-        elif index < 12 and index > 6:
-            split_PANAS_line(line['responses'])
-            if index ==10:
-                p['PANAS']=PANAS
-                scorePANAS()
-                
-                
-            
-        elif index==12 or index ==13:
-            split_line(line['responses'],index)
-            if index==12: 
+        if "responses" in line:
+            if ("Interested" in line["responses"]) or ("Strong" in line["responses"]) or ("Enthusiastic" in line["responses"]) or ("Ashamed" in line["responses"]) or ("Attentive" in line["responses"]):
+                split_PANAS_line(line['responses'])
+                if ("Attentive" in line["responses"]):
+                    p['PANAS']=PANAS
+                    PANAS_index = index
+                    scorePANAS()
+      
+        if index==PANAS_index+1 or index ==PANAS_index+2:
+            split_line(line['responses'],index,PANAS_index)
+            if index==PANAS_index + 2: 
                 p['PHQ']=PHQ
                 scorePHQ()
-                
 
+        if "responses" in line:        
+            if index==PANAS_index+3 or index==PANAS_index+4:
+                split_line(line['responses'],index,PANAS_index)
+                if index==PANAS_index + 4:
+                    p['GAD']=GAD
+                    scoreGAD()
             
-        elif index==14 or index==15:
-            split_line(line['responses'],index)
-            if index==14:
-                p['GAD']=GAD
-                scoreGAD()
-            
-        elif line['trial_type']=="survey-text" and index>22:
+        if line['trial_type']=="survey-text" and index>PANAS_index+15:
             p['length'] = index #saves how long the trial lasted
             p['options'] = options
             p['rates'] = rates
