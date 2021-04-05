@@ -31,9 +31,10 @@ def updateProb(prob , c, Ev):
     t = sum([np.exp(theta*e-b)for e in Ev])
     for p in range(4):
         prob[p] = np.exp(Ev[p]*theta-b)/t
-    rounded = [round(e,4) for e in prob]
+    #rounded = [round(e,4) for e in prob]
     #print("Probabilities: ", rounded)
-    return prob
+    prob0 = [x if x> 0 else 0.0001 for x in prob]
+    return prob0
     
 
 def chooseBox(prob):

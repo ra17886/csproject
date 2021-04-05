@@ -10,7 +10,7 @@ panasNA = []
 panasPA = []
 trial_length = []
 
-directory = 'length_trial'
+directory = 'options_trial'
 
 def getDetails(data):
     gad.append(int(data['GAD_score']))

@@ -155,7 +155,7 @@ def scanLength(json_file):
         elif index==4:
             gender_age(line['responses'])        
             
-        elif index < 11 and index > 6:
+        elif index < 12 and index > 6:
             split_PANAS_line(line['responses'])
             if index ==10:
                 p['PANAS']=PANAS
@@ -163,7 +163,7 @@ def scanLength(json_file):
                 
                 
             
-        elif index==11 or index ==12:
+        elif index==12 or index ==13:
             split_line(line['responses'],index)
             if index==12: 
                 p['PHQ']=PHQ
@@ -171,7 +171,7 @@ def scanLength(json_file):
                 
 
             
-        elif index==13 or index==14:
+        elif index==14 or index==15:
             split_line(line['responses'],index)
             if index==14:
                 p['GAD']=GAD
@@ -196,6 +196,7 @@ for filename in os.listdir(directory):
         json_file = open(os.path.join(directory, filename),'r')
         scanLength(json_file)
 
+#for single file
 #json_file = open(filename, 'r')        
 #scanLength(json_file)
 #print(p)
