@@ -3,21 +3,37 @@ import os
 import json
 from scipy.stats import pearsonr
 import matplotlib.pyplot as plt
+import pandas as pd
+import seaborn as sb
 
+age = []
+gender =[]
 gad =[]
 phq = []
 panasNA = []
 panasPA = []
 trial_length = []
+likelihood = []
+w = []
+a = []
+c = []
 
-directory = 'options_trial'
+directory = 'pvl_trial'
 
 def getDetails(data):
+    age.append(data['age'])
+    gender.append(data['gender'])
     gad.append(int(data['GAD_score']))
     phq.append(int(data['PHQ_score']))
     panasNA.append(int(data['NA_score']))
     panasPA.append(int(data['PA_score']))
     trial_length.append(int(data['length']))
+    likelihood.append(data['likelihood'])
+    w.append(data['w'])
+    a.append(data['a'])
+    c.append(data['c'])
+
+
 
 def length_gad():
     corr, sig = pearsonr(trial_length,gad)
@@ -70,11 +86,17 @@ for filename in os.listdir(directory):
     data = json.load(json_file)
     getDetails(data)
 
-
-length_gad()
-length_phq()
-length_panasNA()
-length_panasPA()
-interCorrelations()
-
-
+df = pd.DataFrame(list(zip(age, gender, gad, phq, panasNA, panasPA, trial_length,likelihood, w,a,c)),
+               columns =['Age', 'Gender','GAD Score','PHQ Score', "NA Score", "PA Score", "Trial Length","Likelihood","W","A","C"])
+pearsoncorr = df.corr(method = 'pearson')
+g = sb.heatmap(pearsoncorr, 
+            xticklabels=pearsoncorr.columns,
+            yticklabels=pearsoncorr.columns,
+            cmap='RdBu_r',
+            center =0,
+            annot=True,
+            linewidth = 0.5,
+            square = True
+            )
+plt.rcParams['figure.figsize']=(10,10)
+plt.savefig('heatmap.png')

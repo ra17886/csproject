@@ -4,6 +4,12 @@ import os
 import json
 from scipy.optimize import minimize
 
+def saveFile(data, filename):
+    n = 'pvl_trial/' + filename
+    with open(n, "x") as f:
+        json.dump(data,f)
+        print('saved ', n)
+
 class F_participant:
     def __init__(self,data):
         self.rewards = [int(x) for x in data['rewards']]
@@ -28,7 +34,13 @@ for filename in os.listdir(directory):
         json_file = open(os.path.join(directory, filename),'r')
         data = json.load(json_file)
         f = F_participant(data)
-        print(filename)
-        print("Likelihood: ", f()['fun'], "X: ", [float("{:.5f}".format(v)) for v in f()['x']])
+        data['likelihood']=f()['fun']
+        data['w']=f()['x'][0]
+        data['a']=f()['x'][1]
+        data['c']=f()['x'][2]
+        
+        saveFile(data, filename)
+
+        #print("Likelihood: ", f()['fun'], "X: ", [float("{:.5f}".format(v)) for v in f()['x']])
         
     
