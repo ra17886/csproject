@@ -78,6 +78,8 @@ def interCorrelations():
     print("GAD vs PHQ:", corrGph, " ", sigC )
     print("PHQ vs PA:", corrPhpa, " ", sigD )
     print("PHQ vs NA:", corrPhna, " ", sigE )
+    
+
 
 
 
@@ -99,4 +101,16 @@ g = sb.heatmap(pearsoncorr,
             square = True
             )
 plt.rcParams['figure.figsize']=(10,10)
-plt.savefig('heatmap.png')
+#plt.savefig('heatmap.png')
+
+#https://stackoverflow.com/questions/25571882/pandas-columns-correlation-with-statistical-significance
+def calculate_pvalues(df):
+    df = df.dropna()._get_numeric_data()
+    dfcols = pd.DataFrame(columns=df.columns)
+    pvalues = dfcols.transpose().join(dfcols, how='outer')
+    for r in df.columns:
+        for c in df.columns:
+            pvalues[r][c] = round(pearsonr(df[r], df[c])[1],6)
+    return pvalues
+
+print(calculate_pvalues(df))
