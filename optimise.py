@@ -1,11 +1,12 @@
 from log_likelihood import computeLikelihood
+from log_likelihoodEV import computeLikelihoodEV
 import gridtest
 import os
 import json
 from scipy.optimize import minimize
 
 def saveFile(data, filename):
-    n = 'pvl_trial/' + filename
+    n = 'evpu_trial/' + filename
     with open(n, "x") as f:
         json.dump(data,f)
         print('saved ', n)
@@ -21,7 +22,7 @@ class F_participant:
         c=3
         x0 = [w,a,c]
         #return gridtest.gridtest(self.rewards, self.options)
-        return minimize(computeLikelihood,x0, args=(self.rewards, self.options),method = 'Nelder-Mead')
+        return minimize(computeLikelihoodEV,x0, args=(self.rewards, self.options),method = 'Nelder-Mead')
 
 def run_optimiser(r,o,rates):
     f = F_participant(r,o)
@@ -31,16 +32,19 @@ def run_optimiser(r,o,rates):
     c = f()['x'][2]
     return likelihood, w, a, c
 
-directory = 'options_trial'
+directory = 'pvl_trial/'
 def getFiles(directory):
     for filename in os.listdir(directory):
         if filename.endswith(".json"):
             json_file = open(os.path.join(directory, filename),'r')
             data = json.load(json_file)
-            f = F_participant(data)
-            data['likelihood'], data['w'], data['a'], data['c']= run_optimiser([int(x) for x in data['rewards']],[int(x) for x in data['options']])
+            r = data['rewards']
+            o = data['options']
+           # f = F_participant(r,o)
+            #run_optimiser(r,o)
+            data['EVPU_likelihood'], data['EVPU_w'], data['EVPU_a'], data['EVPU_c']= run_optimiser(r,o)
             
-            saveFile(data, filename)
+           # saveFile(data, filename)
 
 #getFiles(directory)
         #print("Likelihood: ", f()['fun'], "X: ", [float("{:.5f}".format(v)) for v in f()['x']])

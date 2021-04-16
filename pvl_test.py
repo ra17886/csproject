@@ -6,14 +6,16 @@
 
 #run log likelihood on the values to see what wac are extracted
 
+
 import json 
 import pvl 
 import os
 import optimise
 import numpy 
-w_values = [[]] #first is estimated, second is actual
-a_values = [[]]
-c_values = [[]]
+import matplotlib.pyplot as plt 
+w_values = [] #first is estimated, second is actual
+a_values = []
+c_values = []
 
 def play(w,a,c,n,rates):
     u = [0]*4
@@ -46,31 +48,38 @@ def extractRates(data):
 
 def start(directory):
     for filename in os.listdir(directory):
-        if filename.endswith(".json"):
-            json_file = open(os.path.join(directory, filename),'r')
-            data = json.load(json_file)
-            rates = extractRates(data)
-            rewards, options = play(data['w'], data['a'], data["c"], data["length"],rates)
-            v = [data['w'], data['a'], data["c"]]
-            
-            likelihood , w, a, c = optimise.run_optimiser(rewards,options,rates)
-            w_values.append([w,data['w']])
-            a_values.append([a,data['a']])
-            c_values.append([c,data['c']])
-            print('filename')
-    f = open("w_estimation.txt","w")
-    for row in w_values:
-        numpy.savetxt(f,row)
-    f.close()
-    f1 = open("a_estimation.txt","w")
-    for row in a_values:
-        numpy.savetxt(f1,row)
-    f1.close()
-    f2 = open("c_estimation.txt","w")
-    for row in c_values:
-        numpy.savetxt(f2,row)
-    f2.close()
-    
+        if numpy.random.rand() > 0:
+            print("testing")
+            if filename.endswith(".json"):
+                json_file = open(os.path.join(directory, filename),'r')
+                data = json.load(json_file)
+                rates = extractRates(data)
+                rewards, options = play(data['w'], data['a'], data["c"], data["length"],rates)
+                v = [data['w'], data['a'], data["c"]]
+                
+                likelihood , w, a, c = optimise.run_optimiser(rewards,options,rates)
+                w_values.append([w,data['w']])
+                a_values.append([a,data['a']])
+                c_values.append([c,data['c']])
+                print(filename)
+    print(w_values)
+    print(a_values)
+    print(c_values)
+    w_accuracy = [x[0]-x[1] for x in w_values]
+    a_accuracy = [x[0]-x[1] for x in a_values]
+    c_accuracy = [x[0]-x[1] for x in c_values]
+    print(w_accuracy)
+    print(a_accuracy)
+    print(c_accuracy)
+
+    accuracy = [w_accuracy, a_accuracy, c_accuracy]
+    fig, ax = plt.subplots()
+    ax.set_title('Accuracy of estimated parameters')
+    ax.boxplot(accuracy)
+
+    plt.show()
+
+
 
 directory = "pvl_trial/"
 start(directory)

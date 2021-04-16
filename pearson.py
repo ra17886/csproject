@@ -17,8 +17,11 @@ likelihood = []
 w = []
 a = []
 c = []
+EVPU_w = []
+EVPU_a = []
+EVPU_c = []
 
-directory = 'pvl_trial'
+directory = 'evpu_trial'
 
 def getDetails(data):
     age.append(data['age'])
@@ -32,6 +35,9 @@ def getDetails(data):
     w.append(data['w'])
     a.append(data['a'])
     c.append(data['c'])
+    EVPU_w.append(data['EVPU_w'])
+    EVPU_a.append(data['EVPU_a'])
+    EVPU_c.append(data['EVPU_c'])
 
 
 
@@ -80,7 +86,15 @@ def interCorrelations():
     print("PHQ vs NA:", corrPhna, " ", sigE )
     
 
-
+#https://stackoverflow.com/questions/25571882/pandas-columns-correlation-with-statistical-significance
+def calculate_pvalues(df):
+    df = df.dropna()._get_numeric_data()
+    dfcols = pd.DataFrame(columns=df.columns)
+    pvalues = dfcols.transpose().join(dfcols, how='outer')
+    for r in df.columns:
+        for c in df.columns:
+            pvalues[r][c] = round(pearsonr(df[r], df[c])[1],10)
+    return pvalues
 
 
 for filename in os.listdir(directory):
@@ -88,9 +102,15 @@ for filename in os.listdir(directory):
     data = json.load(json_file)
     getDetails(data)
 
-df = pd.DataFrame(list(zip(age, gender, gad, phq, panasNA, panasPA, trial_length,likelihood, w,a,c)),
-               columns =['Age', 'Gender','GAD Score','PHQ Score', "NA Score", "PA Score", "Trial Length","Likelihood","W","A","C"])
+score = []
+for i in range(len(gad)):
+    score.append(gad[i] + panasNA[i] - panasPA[i] + phq[i])
+
+df = pd.DataFrame(list(zip(age, gender,score, trial_length, w,a,c)),
+               columns =['Age', 'Gender',"Score", "Trial Length","PVL W","PVL A","PVL C"])
 pearsoncorr = df.corr(method = 'pearson')
+print(calculate_pvalues(df))
+
 g = sb.heatmap(pearsoncorr, 
             xticklabels=pearsoncorr.columns,
             yticklabels=pearsoncorr.columns,
@@ -101,16 +121,24 @@ g = sb.heatmap(pearsoncorr,
             square = True
             )
 plt.rcParams['figure.figsize']=(10,10)
+plt.show()
 #plt.savefig('heatmap.png')
 
-#https://stackoverflow.com/questions/25571882/pandas-columns-correlation-with-statistical-significance
-def calculate_pvalues(df):
-    df = df.dropna()._get_numeric_data()
-    dfcols = pd.DataFrame(columns=df.columns)
-    pvalues = dfcols.transpose().join(dfcols, how='outer')
-    for r in df.columns:
-        for c in df.columns:
-            pvalues[r][c] = round(pearsonr(df[r], df[c])[1],6)
-    return pvalues
+df1 = pd.DataFrame(list(zip(age, gender,score, trial_length, EVPU_w,EVPU_a,EVPU_c)),
+               columns =['Age', 'Gender',"Score", "Trial Length","EV-PU W","EV-PU A","EV-PU C"])
+pearsoncorr1 = df1.corr(method = 'pearson')
 
-print(calculate_pvalues(df))
+g = sb.heatmap(pearsoncorr1, 
+            xticklabels=pearsoncorr1.columns,
+            yticklabels=pearsoncorr1.columns,
+            cmap='RdBu_r',
+            center =0,
+            annot=True,
+            linewidth = 0.5,
+            square = True
+            )
+plt.rcParams['figure.figsize']=(10,10)
+plt.show()
+
+
+print(calculate_pvalues(df1))
