@@ -58,9 +58,9 @@ def t_test(bottom, top):
     top_c = getParams(top,"c")
     bottom_c = getParams(bottom,"c")
 
-    print("W T-Test:", stats.ttest_ind(top_w, bottom_w,equal_var = False))
-    print("A T-Test:", stats.ttest_ind(top_a, bottom_a,equal_var = False))
-    print("C T-Test:", stats.ttest_ind(top_c, bottom_c,equal_var = False))
+    print("W_PVL T-Test:", stats.ttest_ind(top_w, bottom_w,equal_var = False))
+    print("A_PVL T-Test:", stats.ttest_ind(top_a, bottom_a,equal_var = False))
+    print("C_PVL T-Test:", stats.ttest_ind(top_c, bottom_c,equal_var = False))
 
 
 scores = getScores(directory)
