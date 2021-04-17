@@ -22,7 +22,7 @@ def computeLikelihoodEV(variables, rewards, options):
     likelihoods = [0.25]
     if w<0: return 10000000
     elif w>5: return 100000
-    elif a>1: return 100000
+    if a>1: return 100000
     elif a<0: return 100000
     elif c>5: return 100000
     elif c<-5: return 1000000 #avoiding params going out of range

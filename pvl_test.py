@@ -16,7 +16,11 @@ import matplotlib.pyplot as plt
 w_values = [] #first is estimated, second is actual
 a_values = []
 c_values = []
+e_w_values = [] 
+e_a_values = []
+e_c_values = []
 
+#plays a game with the given parameters
 def play(w,a,c,n,rates):
     u = [0]*4
     Ev = [0.25]*4
@@ -46,32 +50,10 @@ def extractRates(data):
     probs = [(1-(total-n))/n if x==1 else x for x in probs]
     return(probs)
 
-def start(directory):
-    for filename in os.listdir(directory):
-        if numpy.random.rand() > 0:
-            print("testing")
-            if filename.endswith(".json"):
-                json_file = open(os.path.join(directory, filename),'r')
-                data = json.load(json_file)
-                rates = extractRates(data)
-                rewards, options = play(data['w'], data['a'], data["c"], data["length"],rates)
-                v = [data['w'], data['a'], data["c"]]
-                
-                likelihood , w, a, c = optimise.run_optimiser(rewards,options,rates)
-                w_values.append([w,data['w']])
-                a_values.append([a,data['a']])
-                c_values.append([c,data['c']])
-                print(filename)
-    print(w_values)
-    print(a_values)
-    print(c_values)
-    w_accuracy = [x[0]-x[1] for x in w_values]
-    a_accuracy = [x[0]-x[1] for x in a_values]
-    c_accuracy = [x[0]-x[1] for x in c_values]
-    print(w_accuracy)
-    print(a_accuracy)
-    print(c_accuracy)
-
+def computeAccuracy(w,a,c):
+    w_accuracy = [x[0]-x[1] for x in w]
+    a_accuracy = [x[0]-x[1] for x in a]
+    c_accuracy = [x[0]-x[1] for x in c]
     accuracy = [w_accuracy, a_accuracy, c_accuracy]
     fig, ax = plt.subplots()
     ax.set_title('Accuracy of estimated parameters')
@@ -79,7 +61,41 @@ def start(directory):
 
     plt.show()
 
+def start(directory):
+    n = 0
+    for filename in os.listdir(directory):
+        if numpy.random.rand() > 0: #how many of the results do we want to check?
+            if filename.endswith(".json"):
+                print(n)
+                json_file = open(os.path.join(directory, filename),'r')
+                data = json.load(json_file)
+                rates = extractRates(data)
+            
+                #PVL test
+                rewards, options = play(data['w'], data['a'], data["c"], 1000,rates) #plays a game 
+                v = [data['w'], data['a'], data["c"]]
+                likelihood , w, a, c = optimise.run_optimiser(rewards,options,'p')
+                w_values.append([w,data['w']])
+                a_values.append([a,data['a']])
+                c_values.append([c,data['c']])
 
 
-directory = "pvl_trial/"
+                #EVPU test
+                e_rewards, e_options = play(data['EVPU_w'], data['EVPU_a'], data["EVPU_c"], 1000,rates) #plays a game 
+                e_v = [data['EVPU_w'], data['EVPU_a'], data["EVPU_c"]]
+                likelihood , e_w, e_a, e_c = optimise.run_optimiser(e_rewards,e_options,'e')
+                e_w_values.append([e_w,data['EVPU_w']])
+                e_a_values.append([a,data['EVPU_a']])
+                e_c_values.append([c,data['EVPU_c']])
+                n+=1
+
+    computeAccuracy(w_values,a_values,c_values)
+    computeAccuracy(e_w_values,e_a_values,e_c_values)
+   
+   
+
+    
+
+
+directory = "evpu_trial/"
 start(directory)
