@@ -5,7 +5,9 @@ import game
 options = []
 rewards = []
 
-
+"""
+A reinforcement agent that plays a game using the EV-PU agent. The participantCalc function is the one used to fit participant data to the model
+"""
 
 def prospectUtility(k,reward,u,w):
     if reward ==1: u[k] = 1

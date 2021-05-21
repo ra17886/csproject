@@ -2,6 +2,9 @@ import log_likelihood as log_lklhd
 
 #filename = 'options_trial/clean_05-03-21-155231.json'
 
+"""
+A grid-search method for opimisation of the pvl model
+"""
 def gridtest(rewards, options):
     min = 10000000
     w_opt = 50

@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from scipy.stats import pearsonr
 
 
-#use code in the pearson.py to compute correlations and compute heatmap
+#use code in the pearson.py to compute correlations between individual phq and gad questions and compute heatmap
 #PHQ QUESTIONS
 "0: Little interest or pleasure in doing things"
 "1: Feeling down, depressed, or hopeless"
@@ -52,7 +52,7 @@ for filename in os.listdir(directory):
     getDetails(data)
 
 df = pd.DataFrame(list(zip(PHQ[0],PHQ[1],PHQ[2],PHQ[3],PHQ[4],PHQ[5],PHQ[6],PHQ[7],GAD[0],GAD[1],GAD[2],GAD[3],GAD[4],GAD[5],GAD[6])),
-               columns =['PHQ1', 'PHQ2','PHQ3','PHQ4', "PHQ5", "PHQ6", "PHQ7","PHQ8","GAD1","GAD2","GAD3","GAD4","GAD5","GAD6","GAD7"])
+               columns =['P1', 'P2','P3','P4', "P5", "P6", "P7","P8","G1","G2","G3","G4","G5","G6","G7"])
 pearsoncorr = df.corr(method = 'pearson')
 print(pearsoncorr)
 
@@ -62,14 +62,15 @@ for i in range(8):
         if sig <0.05 and corr>0.5:
          print("PHQ",i," vs GAD",j," Correlation:",corr," P-Value:","%.8f" %sig)
 
-#g = sb.heatmap(pearsoncorr, ß
-           # xticklabels=pearsoncorr.columns,
-          #  yticklabels=pearsoncorr.columns,
-          #  cmap='RdBu_r',
-          #  center =0,
-          #  annot=True,
-          #  linewidth = 0.5,
-          #  square = True
-          #  )
-##plt.rcParams['figure.figsize']=(10,10)
-#plt.show()
+
+
+g = sb.heatmap(pearsoncorr, 
+           xticklabels=pearsoncorr.columns,
+            yticklabels=pearsoncorr.columns,
+            cmap='coolwarm',
+            annot=True,
+            linewidth = 0.5,
+            square = True
+            )
+plt.rcParams['figure.figsize']=(10,10)
+plt.show()

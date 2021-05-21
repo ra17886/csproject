@@ -9,6 +9,10 @@ delta_values = []
 phi_values = []
 c_values = []
 
+"""
+Parameter recovery for the VSE model
+"""
+
 def play(alpha,delta,phi,c,n,rates):
     v= [1]*4
     explore = [1]*4

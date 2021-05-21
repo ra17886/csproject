@@ -1,11 +1,3 @@
-#take in jsons
-#extract wac
-
-#play game with wac values
-#get reward and options chosen
-
-#run log likelihood on the values to see what wac are extracted
-
 
 import json 
 import pvl 
@@ -16,6 +8,13 @@ import numpy
 import matplotlib.pyplot as plt 
 import vse_accuracy
 import vse_optimise
+
+"""
+This module takes a model and participant, plays a game using the estimated parameters for the participant and
+then runs the optimise module this synthetic game data
+There are lots of errors here, particularly with the distiction between the EV-PU game and PVL game, they need separate functions 
+but this has not been implemented correctly
+"""
 
 
 #plays a game with the given parameters
@@ -75,7 +74,7 @@ def PVL(rates, data):
     return [w_values, a_values, c_values]
 
 def EVPU(rates,data):
-    e_rewards, e_options = play(data['EVPU_w'], data['EVPU_a'], data["EVPU_c"], 1000,rates) #plays a game 
+    e_rewards, e_options = play(data['EVPU_w'], data['EVPU_a'], data["EVPU_c"], 1000,rates) #plays a game #needs to be changed to EV-PU play
     likelihood , w, a, c = optimise.run_optimiser(e_rewards,e_options,'e')
     w_values=createDict(data['EVPU_w'],w)
     a_values=createDict(data['EVPU_a'],a)

@@ -5,6 +5,11 @@ import os
 import json
 from scipy.optimize import minimize
 
+"""
+This is the optimisation function and is adapted for each model, this version computes the PVL Model likelihood, 
+by changing the saveFile directory, directory and paramters it can be adapted for any of the models
+"""
+
 def saveFile(data, filename):
     n = 'vse_trial/' + filename
     with open(n, "x") as f:

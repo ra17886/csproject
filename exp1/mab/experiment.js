@@ -254,19 +254,15 @@ timeline.push(experiment_instructions)
   }
 
   function generateRewardRates(){
-
     var r = [0,0,0,0]
-
     for(i=0;i<r.length;i++){
       r[i]= jStat.beta.sample( 2, 2 );
     }
-
       while(!correctDistances(r[0],r[1],r[2],r[3])){
         for(i=0;i<r.length;i++){
           r[i]= jStat.beta.sample( 2, 2 );
         }
       }
-
         var random = Math.floor(Math.random() * r.length);
         r1 = r.splice(random, 1)[0];
 
@@ -278,8 +274,6 @@ timeline.push(experiment_instructions)
 
         var random = Math.floor(Math.random() * r.length);
         r4 = r.splice(random, 1)[0];
-
-     
   }
 
   function resetRewardRates(){

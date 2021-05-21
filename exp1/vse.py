@@ -11,12 +11,15 @@ c = 5 #{0,5}, randomness
 options = []
 rewards = []
 
+"""
+agent that plays a game using the vse model using the startGame function
+participantCalc plays a round of the participants game
+"""
+
 
 def prospectUtility(k,reward,v):
     if reward ==1: v[k] = 1
-    else: v[k] = 0
-    #slightly adjusted from original to suit no reward vs reward
-    # print("Utility: ", v)
+    else: v[k] = 0 #slightly adjusted from original to suit no reward vs reward
     return v
 
 

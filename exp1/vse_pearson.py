@@ -5,6 +5,11 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sb
 
+"""
+computes pcc for affective state and vse paramters
+compute p values
+creates a seaborn heatmap
+"""
 age = []
 gender =[]
 gad =[]

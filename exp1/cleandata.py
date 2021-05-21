@@ -10,9 +10,10 @@ rewards = []
 options = []
 rates = []
 
-
-#CREATING A JSON THAT CONTAINS ANXIETY LEVELS AND LENGTH OF GAME
-#ALSO CREATES ARRAY OF BOXES CHOSEN AND REWARDS
+"""
+This script takes the JSON created by JSPsych and condenses it into a smaller JSON consisting of the important information.
+The new JSONS are saved to the folder defined in the editName function
+"""
 
 def check_consent(r):
     return not "No" in r

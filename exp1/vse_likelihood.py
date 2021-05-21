@@ -7,6 +7,11 @@ import numpy as np
 #a = 0.4
 #c = 3
 
+"""
+computes the log-likelihood for the vse model, if the parameters are out of range, it returns large likelihoods
+this forces the optimisation function away from boundaries
+"""
+
 #filename = 'options_trial/clean_05-03-21-154538.json'
 
 def getInfo(json_file):

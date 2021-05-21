@@ -6,6 +6,11 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sb
 
+"""
+Gets all the data from the JSONS and puts them into arrays, 
+computes the pcc for many paramters and creates heatmaps using seaborn
+"""
+
 age = []
 gender =[]
 gad =[]
@@ -106,6 +111,8 @@ score = []
 for i in range(len(gad)):
     score.append(gad[i] + panasNA[i] - panasPA[i] + phq[i])
 
+interCorrelations()
+
 df = pd.DataFrame(list(zip(age, gender,score, trial_length, w,a,c)),
                columns =['Age', 'Gender',"Score", "Trial Length","PVL W","PVL A","PVL C"])
 pearsoncorr = df.corr(method = 'pearson')
@@ -142,3 +149,5 @@ plt.show()
 
 
 print(calculate_pvalues(df1))
+
+

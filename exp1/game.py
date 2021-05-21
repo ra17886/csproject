@@ -2,6 +2,11 @@
 import numpy as np 
 import random 
 
+"""
+A script to play a multi-armed bandit game, generates reward rates from a Beta(2,2) distribution, ensuring they are all 0.1 apart
+This script is imported into most of the models and used there
+"""
+
 def check(a,b):
     return a-b>0.1
 

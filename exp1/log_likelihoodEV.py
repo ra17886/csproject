@@ -8,7 +8,11 @@ import numpy as np
 #c = 3
 
 #filename = 'options_trial/clean_05-03-21-154538.json'
-
+"""
+EV-PU MODEL
+Computes the log likelihood of the EV-PU model given the model parameters, this script is used in the optimisation stage 
+and is used to test all parameters using Nelder Mead.
+"""
 def getInfo(json_file):
     data = json.load(json_file)
     rewards = [int(x) for x in data['rewards']]

@@ -3,6 +3,10 @@ import json
 from vse_likelihood import computeLikelihood
 from scipy.optimize import minimize
 
+"""
+optimisation for the vse model
+"""
+
 def saveFile(data, filename):
     n = 'vse_trial/' + filename
     with open(n, "x") as f:

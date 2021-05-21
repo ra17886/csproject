@@ -9,6 +9,11 @@ import numpy as np
 
 #filename = 'options_trial/clean_05-03-21-154538.json'
 
+"""
+PVL MODEL
+Using participant data from the getInfo function, this script computes the log likelihood of the model given a set of parameters
+"""
+
 def getInfo(json_file):
     data = json.load(json_file)
     rewards = [int(x) for x in data['rewards']]

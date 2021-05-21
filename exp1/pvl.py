@@ -12,6 +12,10 @@ import game
 options = []
 rewards = []
 
+"""
+PVL agent, plays a synthetic game in the startGame function
+fitted to participant data with the participantCalc function
+"""
 
 def prospectUtility(k,reward,u,w):
     if reward ==1: u[k] = 1
